@@ -18,7 +18,9 @@
 *  12. pricing 
 *  13. testimonials
 *  14. download
-*  15. footer styles
+*  15. cta styles
+*  16. footer styles
+*  17. lightbox buddy packages
 *
 * =================================================================== */
 
@@ -93,14 +95,18 @@ body {
 
 a,
 a:visited {
-  color: #FF7667;
+  color: #84CACD;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 a:hover,
 a:focus {
-  color: #84CACD;
+  color: #FF7667;
+}
+
+p a{
+  text-decoration: underline;
 }
 
 
@@ -2796,7 +2802,7 @@ input[type="email"] {
 
 
 /* ===================================================================
- *  15. footer styles - (_site-layout.scss)
+ *  16. footer styles - (_site-layout.scss)
  *
  * ------------------------------------------------------------------- */
 
@@ -2977,6 +2983,81 @@ footer ul a:visited {
 }
 
 
+
+/* ------------------------------------------------------------------- 
+ * 15. Lightbox Buddy Packages
+ * 
+ * ------------------------------------------------------------------- */
+
+ #buddy-package {
+  text-align: center;
+}
+
+#buddy-package h1::before {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#buddy-package .lead {
+  margin-top: 4.8rem;
+}
+
+#buddy-package .row {
+  max-width: 800px;
+}
+
+#buddy-package .subscribe-form {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#buddy-package input[type="email"] {
+  width: 100%;
+  height: 5.4rem;
+  padding: 1.2rem 100px 1.2rem 60px;
+  background: url(../images/email-icon.png) 20px center no-repeat, rgba(0, 0, 0, 0.1);
+  background-size: 24px 16px, auto;
+  margin-bottom: 1.8rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+#buddy-package input[type="email"]:focus {
+  color: #ffffff;
+}
+
+#buddy-package input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+  background-color: #84CACD;
+  border-color: #84CACD;
+  border-radius: 0 .5rem .5rem 0;
+  padding: 0 15px;
+  margin: 0;
+}
+#buddy-package input[type=submit]:hover {
+  background-color: #FF7667;
+  border-color: #FF7667;
+  color: #fff;
+}
+
+#buddy-package label {
+  color: #ffffff;
+  font-family: "montserrat-regular", sans-serif;
+  font-size: 1.3rem;
+  padding: 0 2rem;
+}
+
+#buddy-package label i {
+  padding-right: 6px;
+}
+
+
+
 /* ------------------------------------------------------------------- 
  * go to top
  * ------------------------------------------------------------------- */
@@ -3017,6 +3098,10 @@ footer ul a:visited {
 #go-top a:focus {
   color: #FFFFFF;
 }
+
+
+
+
 
 
 /* ------------------------------------------------------------------- 
