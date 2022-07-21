@@ -25,4 +25,4 @@ jobs:
         server: server42.webgo24.de
         username: web319
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: ~/www/testGithubActions/
+        server-dir: ~/../www/testGithubActions/
