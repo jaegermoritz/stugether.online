@@ -1,0 +1,28 @@
+name: 🚀 Automatic STUGETHER Deploy on pull_request
+
+on:
+  pull_request:
+    branches: 
+      - master
+      - main
+    types: [closed]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server: server42.webgo24.de
+        username: web319
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: www/testGithubActions
