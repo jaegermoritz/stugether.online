@@ -26,7 +26,7 @@ jobs:
         server: 'lupus.uberspace.de'
         ssh_private_key: ${{ secrets.DEPLOY_TO_UBERSPACE_SSH_KEY }}
         local_path: './*'
-        remote_path: '~/Applications/stugether.online/'
+        remote_path: '/home/genius7/Applications/stugether.online/'
         rsyncArgs: '--exclude=node_modules --exclude=.git --exclude=*.log'
         sftpArgs: '-o ConnectTimeout=5'
         
